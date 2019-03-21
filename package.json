@@ -1,0 +1,19 @@
+{
+  "name": "hoovah_first_aid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "africastalking": "^0.4.0",
+    "dotenv": "^7.0.0",
+    "elasticsearch": "^15.4.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}

@@ -1,1 +1,6 @@
 venv/
+node_modules/
+.vscode/
+.env
+elasticsearch_tutorial.js
+first_aid_info.json
