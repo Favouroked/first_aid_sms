@@ -25,7 +25,9 @@ app.post('/sms', async (req, res) => {
         const result = elastic_result.hits.hits;
         console.log(`[x] search completed for ${text} with length ${result.length}`);
         for (let item of result) {
-            sendMessage(fromNumber, `${item._source.title}:\n${item._source.content}`);
+            sendMessage(fromNumber, `${item._source.title}:\n${item._source.content}`)
+                .then(resp => console.log(`[x] SMS sent for ${item._source.title}`))
+                .catch(error => console.log(`[x] SMS failed for ${item._source.title}`));
         }
         res.json({status: 200, message: "Search completed"});
     }
